@@ -27,11 +27,11 @@ process.env.DATABASE_PASSWORD
 
  let server;
  nextServer.prepare().then(()=> {
-    app.grt("*",(req,res)=> {
+    app.get("*",(req,res)=> {
         return handle(req,res);
     });
    
-    app,listen(port,()=>{
+    app.listen(port, () =>{
         console.log('App running on port ${port}....');
     });
  });
